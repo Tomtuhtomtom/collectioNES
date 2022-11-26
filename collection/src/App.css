@@ -1,31 +1,50 @@
+
 .App {
   height: 100vh;
+  color: #fff;
   background-color: #000;
 }
 
-.main-title {
+.main-page, .main-page-menu{
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 70vh;
   font-size: 3.5vw;
-  color: #fff;
   font-family: 'Press Start 2P';
   text-shadow:
-    -2px 0 0 #fdff2a,
-    -4px 0 0 #df4a42,
-    2px 0 0 #91fcfe,
-    4px 0 0 #4405fc;
+    -0.125rem 0 0 #fdff2a,
+    -0.25rem 0 0 #df4a42,
+    0.125rem 0 0 #91fcfe,
+    0.25rem 0 0 #4405fc;
   animation-name: show;
   animation-duration: 2s;
   }
-  
+
 @keyframes show {
     0% {opacity: 0;}
     100% {opacity: 1;}
 }
 
-.title-item {
-  line-height: 3vh;
-  text-align: center;
+.main-title {
+  padding: 8rem 0 0 0;
+}
+
+.main-menu-list {
+  margin: 0;
+  padding: 0;
+}
+
+.main-menu-list-item {
+  list-style: none;
+}
+
+.main-menu-link{
+  text-decoration: none;
+  font-size: 2.5vw;
+  color: #fff;
+  line-height: 1.8rem;
+}
+
+.main-menu-link:hover, .main-menu-list-item:hover {
+  list-style-type: "▶ ";
 }

@@ -1,18 +1,23 @@
 
 import './App.css';
-import { Login } from './components/Login'
+import {LoggedInMenu} from './components/LoggedInMenu';
+import {LoginMenu} from './components/LoginMenu'
+
+const isLoggedIn = true
+// const isLoggedIn = false
 
 function App() {
   return (
     <div className="App">
-      <div className="main-title">
-        <div className="row">
-          <div className="title-item"><h1>collectioNES</h1></div>
-          <Login />
-        </div>
+      <div className="main-page main-title">
+            <h1>collectioNES</h1>
       </div>
+    <div className="main-page-menu">
+      {!isLoggedIn ? (
+        <LoginMenu />) : (<LoggedInMenu />)}
     </div>
-  );
+    </div>
+    );
 }
 
 export default App;
