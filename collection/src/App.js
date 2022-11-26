@@ -1,5 +1,6 @@
 
 import './App.css';
+import { Login } from './components/Login'
 
 function App() {
   return (
@@ -7,7 +8,7 @@ function App() {
       <div className="main-title">
         <div className="row">
           <div className="title-item"><h1>collectioNES</h1></div>
-          <div className="title-item"><button>Log In</button><button>Register</button></div>
+          <Login />
         </div>
       </div>
     </div>
