@@ -1,5 +1,6 @@
 .App {
   height: 100vh;
+  background-color: #000;
 }
 
 .main-title {
@@ -7,10 +8,24 @@
   align-items: center;
   justify-content: center;
   height: 70vh;
-  font-size: 6vw;
+  font-size: 3.5vw;
+  color: #fff;
+  font-family: 'Press Start 2P';
+  text-shadow:
+    -2px 0 0 #fdff2a,
+    -4px 0 0 #df4a42,
+    2px 0 0 #91fcfe,
+    4px 0 0 #4405fc;
+  animation-name: show;
+  animation-duration: 2s;
+  }
+  
+@keyframes show {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 .title-item {
-  line-height: 0;
+  line-height: 3vh;
   text-align: center;
 }
