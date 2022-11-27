@@ -1,7 +1,7 @@
 import '../App.css';
 import React, { Component } from 'react'
 
-export class LoginMenu extends Component {
+export class MainMenu extends Component {
     render() {
         return (
             <div className="main-menu">

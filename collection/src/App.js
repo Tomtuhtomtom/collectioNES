@@ -1,10 +1,10 @@
 
 import './App.css';
 import {LoggedInMenu} from './components/LoggedInMenu';
-import {LoginMenu} from './components/LoginMenu'
+import {MainMenu} from './components/MainMenu'
 
-// const isLoggedIn = true
-const isLoggedIn = false
+const isLoggedIn = true
+// const isLoggedIn = false
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
       </div>
     <div className="main-page-menu">
       {!isLoggedIn ? (
-        <LoginMenu />) : (<LoggedInMenu />)}
+        <MainMenu />) : (<LoggedInMenu />)}
     </div>
     </div>
     );
