@@ -12,10 +12,11 @@
   font-size: 3.5vw;
   font-family: 'Press Start 2P';
   text-shadow:
-    -0.125rem 0 0 #fdff2a,
-    -0.25rem 0 0 #df4a42,
-    0.125rem 0 0 #91fcfe,
-    0.25rem 0 0 #4405fc;
+    -0.094rem 0 0 #fdff2a,
+    -0.188rem 0 0 #df4a42,
+    0.094rem 0 0 #91fcfe,
+    0.188rem 0 0 #4405fc;
+  letter-spacing: 0.2rem;
   animation-name: show;
   animation-duration: 2s;
   }
@@ -25,8 +26,19 @@
     100% {opacity: 1;}
 }
 
-.main-title {
+.main-page-username-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
   padding: 8rem 0 0 0;
+}
+.main-page-username {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  line-height: 0;
+  font-family: 'Cedarville Cursive';
+  font-size: 3vw;
 }
 
 .main-menu-list {
