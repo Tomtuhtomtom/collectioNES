@@ -3,8 +3,8 @@ import './App.css';
 import {LoggedInMenu} from './components/LoggedInMenu';
 import {LoginMenu} from './components/LoginMenu'
 
-const isLoggedIn = true
-// const isLoggedIn = false
+// const isLoggedIn = true
+const isLoggedIn = false
 
 function App() {
   return (
