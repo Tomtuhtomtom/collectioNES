@@ -15,7 +15,6 @@ export const Login = ({ setAuth, isLoggedIn }) => {
     const handleSubmit = (event) => {
         event.preventDefault()
         setError(null)
-
         axios
             .post('http://127.0.0.1:8000/auth/token/login/', {
                 username: username,
@@ -61,7 +60,7 @@ export const Login = ({ setAuth, isLoggedIn }) => {
             </div>
         </form>
         <div>
-            <Link to="change to '/register' when the component is made"> 
+            <Link to='/register'> 
                 Register
             </Link>
         </div>

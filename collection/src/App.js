@@ -1,8 +1,9 @@
 import './App.css';
 
-import {LoggedInMenu} from './components/LoggedInMenu'
-import {MainMenu} from './components/MainMenu'
-import {Login} from './components/Login'
+import { LoggedInMenu } from './components/LoggedInMenu'
+import { MainMenu } from './components/MainMenu'
+import { Login } from './components/Login'
+import { Title } from './components/Title';
 
 import { useState, useEffect } from 'react'
 import useLocalStorageState from 'use-local-storage-state'
@@ -34,27 +35,20 @@ function App() {
           },
         }
       )
-      .then(() => {
-        setAuth('', null)
+      .then(() =>
+        setAuth('', null),
         navigate('/')
-      })
+      )
+      .catch(() =>
+      setAuth('', null)
+      )
   }
-
-  const [currentUser, setCurrentUser] = useState(null);
 
   const isLoggedIn = username && token
 
   return (
     <div className="App">
-      <div className="main-page-username-container">{isLoggedIn ? (
-          <h2 className="main-page-username">Username's</h2>) : (<h2 className="main-page-username"></h2>)}</div>
-      <div className="main-page main-title">
-        <h1>collectioNES</h1>
-      </div>
-    <div className="main-page-menu">
-      {!isLoggedIn ? (
-        <MainMenu />) : (<LoggedInMenu />)}
-    </div>
+      <Title isLoggedIn={isLoggedIn}/>
     </div>
     );
 }
