@@ -40,33 +40,41 @@ export const Register = ({setAuth}) => {
     }
 
     return (
-        <div className='login-register-page-container'>
-            <h1>Registration Page</h1>
-            {error && <div>{error}</div>}
-            <form onSubmit={handleSubmit}>
-                <label htmlFor='username'>Username</label>
-                <input
-                    id='username'
-                    onChange={(e) => setUsername(e.target.value)}
-                    type='text'
-                    autoComplete='on'
-                    value={username}
-                    required
-                    />
-                <label htmlFor='password'>Password</label>
-                <input
-                    id='password'
-                    onChange={(e) => setPassword(e.target.value)}
-                    type='text'
-                    autoComplete='on'
-                    value={password}
-                    required
-                    />
-                <button type='submit' value='Register'>Register</button>
-            </form>
-            <p>Already have an account?</p>
-            <div>
-                <Link to='/login/'>Back to Login</Link>
+        <div className='App'>
+            <div className='main-page main-title'>
+                <h1>collectioNES</h1>
+            </div>
+            <div className='main-page-menu'>
+            {error && <p>{error}</p>}
+                <form onSubmit={handleSubmit}>
+                    <div>
+                        <label htmlFor='username'>Username: </label>
+                        <input
+                            onChange={(e) => setUsername(e.target.value)}
+                            type='text'
+                            autoComplete='on'
+                            value={username}
+                            required
+                            className="main-menu-link"
+                        ></input>
+                    </div>
+                    <div>
+                        <label htmlFor='password'>Password: </label>
+                        <input
+                            onChange={(e) => setPassword(e.target.value)}
+                            type='text'
+                            autoComplete='on'
+                            value={password}
+                            required
+                            className="main-menu-link"
+                        ></input>
+                    </div>
+                    <ul>
+                        <li className="main-menu-list-item"><Link onClick={handleSubmit} className="main-menu-link" >Register</Link></li>
+                        <li className="main-menu-list-item"><p>Already have an account?</p></li>
+                        <li className="main-menu-list-item"><Link className="main-menu-link" to='/login/'>Back to Login</Link></li>
+                    </ul>
+                </form>
             </div>
         </div>
     )

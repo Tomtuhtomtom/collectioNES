@@ -36,26 +36,26 @@ export const Login = ({ setAuth, isLoggedIn }) => {
                 <h1>collectioNES</h1>
             </div>
             <div className="main-page-menu">
-                { error && <p className='error'>{error} </p> }
+                { error && <p>{error}</p> }
                 <form onSubmit={handleSubmit}>
                     <div>
                         <label htmlFor='username-input'>Username: </label>
                         <input
                             type='text'
-                            id='username-input'
                             value={username}
                             required
                             onChange = {(e) => setUsername(e.target.value)}
+                            className="main-menu-link"
                         ></input>
                     </div>
                     <div>
                         <label htmlFor='password-input'>Password: </label>
                         <input
                             type='password'
-                            id='password-input'
                             value={password}
                             required
                             onChange = {(e) => setPassword(e.target.value)}
+                            className="main-menu-link"
                         ></input>
                     </div>
                     <div>
