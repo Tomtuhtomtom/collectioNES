@@ -40,7 +40,7 @@ export const Register = ({setAuth}) => {
     }
 
     return (
-        <div>
+        <div className='login-register-page-container'>
             <h1>Registration Page</h1>
             {error && <div>{error}</div>}
             <form onSubmit={handleSubmit}>

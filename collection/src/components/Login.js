@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import { useState } from 'react';
-import axios from 'axios';
-import "../App.css";
-// import { Register } from "./register";
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import React, { Component } from 'react'
+import { useState } from 'react'
+import axios from 'axios'
+import "../App.css"
+import { Register } from './Register'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
 
 
 export const Login = ({ setAuth, isLoggedIn }) => {
@@ -31,7 +31,7 @@ export const Login = ({ setAuth, isLoggedIn }) => {
     }
     if (!isLoggedIn){
     return (
-        <div>
+        <div className='login-register-page-container'>
         <h1>test</h1>
         { error && <p className='error'>{error} </p> }
         <form onSubmit={handleSubmit}>

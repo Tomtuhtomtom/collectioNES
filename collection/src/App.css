@@ -5,6 +5,10 @@
   background-color: #000;
 }
 
+.login-register-page-container {
+  overflow: hidden;
+}
+
 .main-page, .main-page-menu{
   display: flex;
   align-items: center;

@@ -3,7 +3,8 @@ import './App.css';
 import { LoggedInMenu } from './components/LoggedInMenu'
 import { MainMenu } from './components/MainMenu'
 import { Login } from './components/Login'
-import { Title } from './components/Title';
+import { Title } from './components/Title'
+import { Register } from './components/Register'
 
 import { useState, useEffect } from 'react'
 import useLocalStorageState from 'use-local-storage-state'
@@ -48,7 +49,20 @@ function App() {
 
   return (
     <div className="App">
-      <Title isLoggedIn={isLoggedIn}/>
+      <Routes>
+        <Route
+          path="/"
+          element={<Title setAuth={setAuth} isLoggedIn={isLoggedIn} username={username} handleLogout={handleLogout} />}
+        />
+        <Route
+          path="/login"
+          element={<Login setAuth={setAuth} isLoggedIn={isLoggedIn} />}
+        />
+        <Route
+          path="/register"
+          element={<Register setAuth={setAuth} isLoggedIn={isLoggedIn} />}
+        />
+      </Routes>
     </div>
     );
 }
