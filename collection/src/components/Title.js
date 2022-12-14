@@ -7,7 +7,8 @@ export const Title = ({setAuth, isLoggedIn, username, handleLogout}) => {
     return (
         <div>
             <div className="main-page-username-container">{isLoggedIn ? (
-                <h2 className="main-page-username">{username}'s</h2>) : (<h2 className="main-page-username"></h2>)}</div>
+                <h2 className="main-page-username">{username}'s</h2>) : (<h2 className="main-page-username"></h2>)}
+            </div>
             <div className="main-page main-title">
                 <h1>collectioNES</h1>
             </div>
