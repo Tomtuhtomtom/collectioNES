@@ -48,21 +48,26 @@ function App() {
   const isLoggedIn = username && token
 
   return (
-    <div className="App">
-      <Routes>
-        <Route
-          path="/"
-          element={<Title setAuth={setAuth} isLoggedIn={isLoggedIn} username={username} handleLogout={handleLogout} />}
-        />
-        <Route
-          path="/login"
-          element={<Login setAuth={setAuth} isLoggedIn={isLoggedIn} />}
-        />
-        <Route
-          path="/register"
-          element={<Register setAuth={setAuth} isLoggedIn={isLoggedIn} />}
-        />
-      </Routes>
+    <div className='App'>
+      <div>
+        <div className='main-page-username-container'>{isLoggedIn ? (
+          <h2 className='main-page-username'>{username}'s</h2>) : (<h2 className='main-page-username'></h2>)}
+        </div>
+        <Routes>
+          <Route
+            path='/'
+            element={<Title setAuth={setAuth} isLoggedIn={isLoggedIn} username={username} handleLogout={handleLogout} />}
+          />
+          <Route
+            path='/login'
+            element={<Login setAuth={setAuth} isLoggedIn={isLoggedIn} />}
+          />
+          <Route
+            path='/register'
+            element={<Register setAuth={setAuth} isLoggedIn={isLoggedIn} />}
+          />
+        </Routes>
+      </div>
     </div>
     );
 }

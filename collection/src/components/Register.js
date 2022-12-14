@@ -26,7 +26,8 @@ export const Register = ({setAuth}) => {
                 }
             ))
             .then((res) => {
-                setAuth(username, res.data.auth_token)
+                const token = res.data.auth_token
+                setAuth(username, token)
                 navigate('/')
             })
             .catch((error) => {
@@ -40,12 +41,11 @@ export const Register = ({setAuth}) => {
     }
 
     return (
-        <div className='App'>
+        <>
             <div className='main-page main-title'>
-                <h1>collectioNES</h1>
+                <h1><Link className="title-link" to='/'>collectioNES</Link></h1>
             </div>
             <div className='main-page-menu'>
-            {error && <p>{error}</p>}
                 <form onSubmit={handleSubmit}>
                     <div>
                         <label htmlFor='username'>Username: </label>
@@ -55,7 +55,7 @@ export const Register = ({setAuth}) => {
                             autoComplete='on'
                             value={username}
                             required
-                            className="main-menu-link"
+                            className='main-menu-link-input'
                         ></input>
                     </div>
                     <div>
@@ -66,17 +66,21 @@ export const Register = ({setAuth}) => {
                             autoComplete='on'
                             value={password}
                             required
-                            className="main-menu-link"
+                            className='main-menu-link-input'
                         ></input>
                     </div>
-                    <ul>
-                        <li className="main-menu-list-item"><Link onClick={handleSubmit} className="main-menu-link" >Register</Link></li>
-                        <li className="main-menu-list-item"><p>Already have an account?</p></li>
-                        <li className="main-menu-list-item"><Link className="main-menu-link" to='/login/'>Back to Login</Link></li>
-                    </ul>
+                    <div className='error'>
+                        { error && <p>{error}</p> }
+                    </div>
+                    <div>
+                        <ul>
+                            <li className='main-menu-list-item'><Link onClick={handleSubmit} className='main-menu-link' >Register</Link></li>
+                            <li className='main-menu-list-item'><Link className='main-menu-link' to='/login/'>Back to Login</Link></li>
+                        </ul>
+                    </div>
                 </form>
             </div>
-        </div>
+        </>
     )
 }
 

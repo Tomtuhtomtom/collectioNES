@@ -9,6 +9,11 @@
   overflow: hidden;
 }
 
+.title-link, .main-menu-link {
+  text-decoration: none;
+  color: #fff;
+}
+
 .main-page, .main-page-menu{
   display: flex;
   align-items: center;
@@ -54,13 +59,23 @@
   list-style: none;
 }
 
-.main-menu-link{
-  text-decoration: none;
+.main-menu-link, .main-menu-link-input{
   font-size: 2.5vw;
-  color: #fff;
   line-height: 1.8rem;
 }
 
-.main-menu-link:hover, .main-menu-list-item:hover {
+.main-menu-link-input {
+  font-family: 'Press Start 2P';
+  color: #000;
+  font-size: 1.5vw;
+  width: 20vw;
+}
+
+.main-menu-list-item:hover {
   list-style-type: "▶ ";
+}
+
+.error {
+  width: 58vw;
+  font-size: 2vw;
 }
