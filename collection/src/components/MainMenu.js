@@ -10,7 +10,7 @@ export class MainMenu extends Component {
             <div className='main-menu'>
                 <ul className='main-menu-list'>
                     <li className='main-menu-list-item'><Link className='main-menu-link' to='/login/'>Log In</Link></li>
-                    <li className='main-menu-list-item'><Link className='main-menu-link' onClick={ Register } to='/register/'>Register</Link></li>
+                    <li className='main-menu-list-item'><Link className='main-menu-link' to='/register/'>Register</Link></li>
                 </ul>
             </div>
         )

@@ -59,11 +59,11 @@ function App() {
             element={<Title setAuth={setAuth} isLoggedIn={isLoggedIn} username={username} handleLogout={handleLogout} />}
           />
           <Route
-            path='/login'
+            path='/login/'
             element={<Login setAuth={setAuth} isLoggedIn={isLoggedIn} />}
           />
           <Route
-            path='/register'
+            path='/register/'
             element={<Register setAuth={setAuth} isLoggedIn={isLoggedIn} />}
           />
         </Routes>
