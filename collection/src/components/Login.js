@@ -32,9 +32,6 @@ export const Login = ({ setAuth, isLoggedIn }) => {
     if (!isLoggedIn){
     return (
         <>
-            <div className='main-page main-title'>
-                <h1><Link className='title-link' to='/'>collectioNES</Link></h1>
-            </div>
             <div className='main-page-menu'>
                 <form onSubmit={handleSubmit}>
                     <div>

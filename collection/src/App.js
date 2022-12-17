@@ -1,7 +1,5 @@
 import './App.css';
 
-import { LoggedInMenu } from './components/LoggedInMenu'
-import { MainMenu } from './components/MainMenu'
 import { Login } from './components/Login'
 import { Title } from './components/Title'
 import { Register } from './components/Register'
@@ -11,9 +9,6 @@ import useLocalStorageState from 'use-local-storage-state'
 import { Routes, Route } from 'react-router-dom'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
-
-// const isLoggedIn = true
-// const isLoggedIn = false
 
 function App() {
   const [token, setToken] = useLocalStorageState('collectionToken', null)
@@ -53,11 +48,8 @@ function App() {
         <div className='main-page-username-container'>{isLoggedIn ? (
           <h2 className='main-page-username'>{username}'s</h2>) : (<h2 className='main-page-username'></h2>)}
         </div>
+        <Title isLoggedIn={isLoggedIn} handleLogout={handleLogout} />
         <Routes>
-          <Route
-            path='/'
-            element={<Title setAuth={setAuth} isLoggedIn={isLoggedIn} username={username} handleLogout={handleLogout} />}
-          />
           <Route
             path='/login/'
             element={<Login setAuth={setAuth} isLoggedIn={isLoggedIn} />}
