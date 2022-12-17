@@ -19,7 +19,6 @@ export const MainMenu = ({isLoggedIn, handleLogout}) => {
                         ) : (
                         <>
                         <li className='main-menu-list-item'><Link className='main-menu-link' to='/login/'>Log In</Link></li>
-                        <li className='main-menu-list-item'><Link className='main-menu-link' to='/register/'>Register</Link></li>
                         </>
                         )
                     }

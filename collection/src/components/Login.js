@@ -59,7 +59,7 @@ export const Login = ({ setAuth, isLoggedIn }) => {
                     </div>
                     <div>
                         <ul>
-                            <li className='main-menu-list-item'><Link onClick={handleSubmit} className='main-menu-link' >Login</Link></li>
+                            <li className='main-menu-list-item'><Link onClick={handleSubmit} className='main-menu-link' >Sign In</Link></li>
                             <li className='main-menu-list-item'><Link className='main-menu-link' to='/register/'>Register</Link></li>
                         </ul>
                     </div>

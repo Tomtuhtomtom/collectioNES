@@ -71,7 +71,7 @@ export const Register = ({setAuth, isLoggedIn}) => {
                     </div>
                     <div>
                         <ul>
-                            <li className='main-menu-list-item'><Link onClick={handleSubmit} className='main-menu-link' >Register</Link></li>
+                            <li className='main-menu-list-item'><Link onClick={handleSubmit} className='main-menu-link' >Create Account</Link></li>
                             <li className='main-menu-list-item'><Link className='main-menu-link' to='/login/'>Back to Login</Link></li>
                         </ul>
                     </div>

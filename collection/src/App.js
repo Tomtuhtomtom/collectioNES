@@ -48,17 +48,7 @@ function App() {
         <div className='main-page-username-container'>{isLoggedIn ? (
           <h2 className='main-page-username'>{username}'s</h2>) : (<h2 className='main-page-username'></h2>)}
         </div>
-        <Title isLoggedIn={isLoggedIn} handleLogout={handleLogout} />
-        <Routes>
-          <Route
-            path='/login/'
-            element={<Login setAuth={setAuth} isLoggedIn={isLoggedIn} />}
-          />
-          <Route
-            path='/register/'
-            element={<Register setAuth={setAuth} isLoggedIn={isLoggedIn} />}
-          />
-        </Routes>
+        <Title setAuth={setAuth} isLoggedIn={isLoggedIn} handleLogout={handleLogout} />
       </div>
     </div>
     );
