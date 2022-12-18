@@ -45,10 +45,7 @@ function App() {
   return (
     <div className='App'>
       <div>
-        <div className='main-page-username-container'>{isLoggedIn ? (
-          <h2 className='main-page-username'>{username}'s</h2>) : (<h2 className='main-page-username'></h2>)}
-        </div>
-        <Title setAuth={setAuth} isLoggedIn={isLoggedIn} handleLogout={handleLogout} />
+        <Title setAuth={setAuth} isLoggedIn={isLoggedIn} handleLogout={handleLogout} username={username} token={token} />
       </div>
     </div>
     );

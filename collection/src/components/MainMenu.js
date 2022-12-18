@@ -10,7 +10,7 @@ export const MainMenu = ({isLoggedIn, handleLogout}) => {
                 <ul className='main-menu-list'>
                     {isLoggedIn ? (
                         <>
-                        <li className='main-menu-list-item'><Link className='main-menu-link' to=''>New Collection</Link></li>
+                        <li className='main-menu-list-item'><Link className='main-menu-link' to='/new-collection/'>New Collection</Link></li>
                         <li className='main-menu-list-item'><Link className='main-menu-link' to=''>Load Collection</Link></li>
                         <li className='main-menu-list-item'><Link className='main-menu-link' to=''>Official Collection</Link></li>
                         <li className='main-menu-list-item'><Link className='main-menu-link' to=''>Unlicensed Collection</Link></li>
