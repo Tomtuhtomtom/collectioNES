@@ -5,9 +5,27 @@ import { Link, Routes, Route } from 'react-router-dom'
 import { Login } from './Login'
 import { Register } from './Register'
 import { NewCollection } from './NewCollection'
+import { Collections } from './Collections'
+import { useState } from 'react'
+import axios from 'axios'
 
-export const Title = ({setAuth, isLoggedIn, username, handleLogout, token}) => {
+export const Title = ({setAuth, isLoggedIn, handleLogout, username, token}) => {
     const title = 'collectioNES'
+    const [collections, setCollections] = useState([])
+
+    const handleUserCollections = () => {
+        axios
+            .get('http:127.0.0.1:8000/mycollections/',
+            {
+                headers: {
+                    Authorization: `Token ${token}`,
+                    },
+            })
+            .then((res) => {
+                setCollections(res.data.results)
+            })
+    }
+
     return (
         <>
         <div className='main-page-username-container'>{isLoggedIn ? (
@@ -20,7 +38,7 @@ export const Title = ({setAuth, isLoggedIn, username, handleLogout, token}) => {
         <Routes>
             <Route
                 path='/'
-                element={<MainMenu isLoggedIn={isLoggedIn} handleLogout={handleLogout} />}
+                element={<MainMenu isLoggedIn={isLoggedIn} handleLogout={handleLogout} token={token} handleUserCollections={handleUserCollections}/>}
                 />
             <Route
                 path='/login/'
@@ -33,6 +51,10 @@ export const Title = ({setAuth, isLoggedIn, username, handleLogout, token}) => {
             <Route
                 path='/new-collection/'
                 element={<NewCollection setAuth={setAuth} isLoggedIn={isLoggedIn} token={token} />}
+                />
+            <Route
+                path='/load-collection/'
+                element={<Collections collections={collections} username={username} title={title} />}
                 />
         </Routes>
         </div>
