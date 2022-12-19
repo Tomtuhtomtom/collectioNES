@@ -21,13 +21,13 @@ export const Collections = ({username, title, token}) => {
 
     return (
         <>
-        {/* <header>
-            <div>{username}'s</div>
-            <div>{title}</div>
-        </header> */}
-        <div>
-            <div>Load Collection</div>
-            <div>
+        <header className='collection-header'>
+            <div className='collection-username'>{username}'s</div>
+            <div className='collection-app-title'>{title}</div>
+        </header>
+        <div className='collection-page'>
+            <h1 className='collection-title'>Load Collection</h1>
+            <div className='collection-container'>
                 {collections.map((collection) => (
                     <div key={collection.id}>
                         <Collection
@@ -57,13 +57,13 @@ export const Collections = ({username, title, token}) => {
 
         return (
             <>
-                <div>
+                <div className='collection-name'>
                     name: {name}
                 </div>
-                <div>
+                <div className='collection-time'>
                     Last updated: {formatedUpdatedTime}
                 </div>
-                <div>
+                <div className='collection-edit-links'>
                     <Link to=''>Change Name</Link>
                     <Link to=''>Delete</Link>
                 </div>

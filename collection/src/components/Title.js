@@ -38,10 +38,6 @@ export const Title = ({setAuth, isLoggedIn, handleLogout, username, token}) => {
                 path='/new-collection/'
                 element={<NewCollection token={token} />}
                 />
-            <Route
-                path='/load-collection/'
-                element={<Collections username={username} title={title} token={token}/>}
-                />
         </Routes>
         </div>
         </>
