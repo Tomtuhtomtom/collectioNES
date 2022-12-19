@@ -1,7 +1,23 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link, Navigate, useNavigate } from 'react-router-dom'
+import axios from 'axios'
+import format from 'date-fns/format'
 
-export const Collections = ({collections, username, title}) => {
+export const Collections = ({username, title, token}) => {
+    const [collections, setCollections] = useState([])
+
+    useEffect(() => {
+        axios
+            .get('http://127.0.0.1:8000/mycollections/',
+            {
+                headers: {
+                    Authorization: `Token ${token}`,
+                    },
+            })
+            .then((res) => {
+                setCollections(res.data)
+            })
+    },[])
 
     return (
         <>
@@ -37,13 +53,15 @@ export const Collections = ({collections, username, title}) => {
             navigate(`/delete/${collection.id}`)
         }
 
+        const formatedUpdatedTime = format(new Date(updated_at), 'PPp')
+
         return (
             <>
                 <div>
-                    {name}
+                    name: {name}
                 </div>
                 <div>
-                    {updated_at}
+                    Last updated: {formatedUpdatedTime}
                 </div>
                 <div>
                     <Link to=''>Change Name</Link>

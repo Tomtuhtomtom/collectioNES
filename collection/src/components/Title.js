@@ -11,20 +11,6 @@ import axios from 'axios'
 
 export const Title = ({setAuth, isLoggedIn, handleLogout, username, token}) => {
     const title = 'collectioNES'
-    const [collections, setCollections] = useState([])
-
-    const handleUserCollections = () => {
-        axios
-            .get('http:127.0.0.1:8000/mycollections/',
-            {
-                headers: {
-                    Authorization: `Token ${token}`,
-                    },
-            })
-            .then((res) => {
-                setCollections(res.data.results)
-            })
-    }
 
     return (
         <>
@@ -38,7 +24,7 @@ export const Title = ({setAuth, isLoggedIn, handleLogout, username, token}) => {
         <Routes>
             <Route
                 path='/'
-                element={<MainMenu isLoggedIn={isLoggedIn} handleLogout={handleLogout} token={token} handleUserCollections={handleUserCollections}/>}
+                element={<MainMenu isLoggedIn={isLoggedIn} handleLogout={handleLogout} token={token} />}
                 />
             <Route
                 path='/login/'
@@ -50,11 +36,11 @@ export const Title = ({setAuth, isLoggedIn, handleLogout, username, token}) => {
                 />
             <Route
                 path='/new-collection/'
-                element={<NewCollection setAuth={setAuth} isLoggedIn={isLoggedIn} token={token} />}
+                element={<NewCollection token={token} />}
                 />
             <Route
                 path='/load-collection/'
-                element={<Collections collections={collections} username={username} title={title} />}
+                element={<Collections username={username} title={title} token={token}/>}
                 />
         </Routes>
         </div>
