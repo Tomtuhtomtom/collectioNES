@@ -1,3 +1,18 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #000;
+  overflow: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
 
 .App {
   height: 100vh;
@@ -78,4 +93,79 @@
 .error {
   width: 58vw;
   font-size: 2vw;
+}
+
+.collection-header {
+  font-family: 'Press Start 2P';
+  background-color:#5f9ea0;
+  height: 10vh;
+  position: relative;
+  text-shadow:
+    -0.094rem 0 0 #fdff2a,
+    -0.188rem 0 0 #df4a42,
+    0.094rem 0 0 #91fcfe,
+    0.188rem 0 0 #4405fc;
+}
+
+.collection-username {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 100%;
+  position: absolute;
+  margin: 0 0 0 2vw;
+  font-size: 1.5vw;
+}
+
+.collection-app-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 4vw;
+}
+
+.collection-page {
+  background-color:darkgray;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.collection-title {
+  text-align: center;
+  font-family: 'Press Start 2P';
+  text-shadow:
+    -0.094rem 0 0 #fdff2a,
+    -0.188rem 0 0 #df4a42,
+    0.094rem 0 0 #91fcfe,
+    0.188rem 0 0 #4405fc;
+  font-size: 3vw;
+}
+
+.collection-container {
+  display: flex;
+  flex: wrap;
+  padding: 5vw;
+  font-family: 'Press Start 2P';
+  text-shadow:
+    -0.094rem 0 0 #fdff2a,
+    -0.188rem 0 0 #df4a42,
+    0.094rem 0 0 #91fcfe,
+    0.188rem 0 0 #4405fc;
+  font-size: 2vw;
+}
+
+.collection-single-container {
+  width: 30vw;
+}
+
+.collection-name {
+  text-align: center;
+  height: 10vh;
+  background-color: darkcyan;
+  border: 5px solid black;
+}
+
+.collection-time {
+  font-size: 1vw;
 }

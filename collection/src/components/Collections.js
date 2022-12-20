@@ -56,9 +56,9 @@ export const Collections = ({username, title, token}) => {
         const formatedUpdatedTime = format(new Date(updated_at), 'PPp')
 
         return (
-            <>
+            <div className='collection-single-container'>
                 <div className='collection-name'>
-                    name: {name}
+                    {name}
                 </div>
                 <div className='collection-time'>
                     Last updated: {formatedUpdatedTime}
@@ -67,6 +67,6 @@ export const Collections = ({username, title, token}) => {
                     <Link to=''>Change Name</Link>
                     <Link to=''>Delete</Link>
                 </div>
-            </>
+            </div>
         )
     }
