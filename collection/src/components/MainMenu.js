@@ -18,7 +18,7 @@ export const MainMenu = ({isLoggedIn, handleLogout, token}) => {
                     <li className='main-menu-list-item'><Link className='main-menu-link' to='/load-collection/'>Load Collection</Link></li>
                     <li className='main-menu-list-item'><Link className='main-menu-link' to=''>Official Collection</Link></li>
                     <li className='main-menu-list-item'><Link className='main-menu-link' to=''>Unlicensed Collection</Link></li>
-                    <li className='main-menu-list-item'><Link className='main-menu-link' onClick={handleLogout} to=''>Log Out</Link></li>
+                    <li className='main-menu-list-item'><Link className='main-menu-link' onClick={handleLogout} to='/'>Log Out</Link></li>
                     </>
                     ) : (
                     <>
